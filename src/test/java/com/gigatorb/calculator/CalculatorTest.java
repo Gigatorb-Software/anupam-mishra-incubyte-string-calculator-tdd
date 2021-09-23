@@ -10,7 +10,7 @@ public class CalculatorTest extends TestCase {
     @Test
     public void testWithEmptyString(){
         Calculator calculator = new Calculator();
-        double num = calculator.addMe("");
+        double num = calculator.addMe(" ");
         Assert.assertEquals(0, num, 0);
     }
 
@@ -36,6 +36,14 @@ public class CalculatorTest extends TestCase {
         Calculator calculator = new Calculator();
         double num = calculator.addMe("3\n4,5");
         Assert.assertEquals(12, num, 0);
+    }
+
+    //Support different delimiters
+    @Test
+    public void testSupportDifferentDelimiters(){
+        Calculator calculator = new Calculator();
+        double num = calculator.addMe("//;\n1;2");
+        Assert.assertEquals(3, num, 0);
     }
 
 
