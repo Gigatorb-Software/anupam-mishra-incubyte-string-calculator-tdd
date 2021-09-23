@@ -21,4 +21,12 @@ public class CalculatorTest extends TestCase {
         double num = calculator.addMe(null);
         Assert.assertEquals(0, num, 0);
     }
+
+    //Test with multiple numbers
+    @Test
+    public void testWithUnkownAmountOfNumbers(){
+        Calculator calculator = new Calculator();
+        double num = calculator.addMe("3,4,5,6");
+        Assert.assertEquals(18, num, 0);
+    }
 }
