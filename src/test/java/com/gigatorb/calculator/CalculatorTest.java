@@ -13,4 +13,12 @@ public class CalculatorTest extends TestCase {
         double num = calculator.addMe("");
         Assert.assertEquals(0, num, 0);
     }
+
+    // Test with null String
+    @Test
+    public void testWithNullString(){
+        Calculator calculator = new Calculator();
+        double num = calculator.addMe(null);
+        Assert.assertEquals(0, num, 0);
+    }
 }

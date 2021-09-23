@@ -4,7 +4,7 @@ public class Calculator {
 
     public double addMe(String str){
         double output = 0;
-        if(str != null || str.length() == 0){
+        if(str == null || str.length() == 0){
             return output;
         }
 
