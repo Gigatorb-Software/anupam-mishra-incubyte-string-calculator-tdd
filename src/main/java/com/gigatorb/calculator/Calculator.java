@@ -8,7 +8,7 @@ public class Calculator {
             return output;
         }
 
-        String strArr[] = str.trim().split(",");
+        String strArr[] = str.trim().replaceAll("\n",",").split(",");
 
         for(String str1: strArr){
             output += Double.parseDouble(str1.trim());

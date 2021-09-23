@@ -29,4 +29,14 @@ public class CalculatorTest extends TestCase {
         double num = calculator.addMe("3,4,5,6");
         Assert.assertEquals(18, num, 0);
     }
+
+    //Handling new lines between numbers
+    @Test
+    public void testHandlingNewLines(){
+        Calculator calculator = new Calculator();
+        double num = calculator.addMe("3\n4,5");
+        Assert.assertEquals(12, num, 0);
+    }
+
+
 }
